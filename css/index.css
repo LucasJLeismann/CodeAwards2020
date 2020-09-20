@@ -1,7 +1,14 @@
 @media screen and (min-width: 900px) {
 
+    html {
+        scroll-behavior: smooth;
+        overflow: hidden;
+    }
+
     body {
         background-color: black;
+        border: none;
+        margin: 0px;
     }
 
     main {
@@ -13,7 +20,7 @@
     }
 
     header{
-        margin-top: 40px;
+        padding-top: 40px;
     }
 
     a {
@@ -106,5 +113,47 @@
 
         margin-left: auto;
         margin-right: auto;
+    }
+
+    #indicador_rolar{
+        position: absolute;
+        left: calc((100vw - 30px)/2);
+        top: calc((100vh - 58px));
+        width: 30px;
+        animation: anim_indicador .5s ease infinite;
+        animation-direction: alternate;
+    }
+
+    @keyframes anim_indicador {
+        0% {
+            top: calc((100vh - 75px));
+        }
+        100% {
+            top: calc((100vh - 80px));
+        }
+      }
+
+    #Challenge {
+        height: 100vh;
+        background-image: url(../images/bg_homepage2.png);
+        background-repeat: repeat-x;
+        background-size: 100%;
+        background-position: 0px;
+    }
+
+    #Cronograma {
+        height: 100vh;
+        background-image: url(../images/bg_homepage2.png);
+        background-repeat: repeat-x;
+        background-size: 100%;
+        background-position: 0px;
+    }
+
+    #Inscricoes {
+        height: 100vh;
+        background-image: url(../images/bg_homepage2.png);
+        background-repeat: repeat-x;
+        background-size: 100%;
+        background-position: 0px;
     }
 }
