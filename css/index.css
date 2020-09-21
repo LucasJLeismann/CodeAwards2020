@@ -91,7 +91,7 @@
         width: 450px;
         top: calc((100vh - 260px)/2);
         left: calc((100vw - 450px)/2);
-        position: fixed;
+        position: absolute;
     }
 
     #logo_CodeAwards {
