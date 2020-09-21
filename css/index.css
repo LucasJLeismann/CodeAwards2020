@@ -15,7 +15,7 @@
         height: 100vh;
         background-image: url(../images/bg_homepage2.png);
         background-repeat: repeat-x;
-        background-size: 100%;
+        background-size: contain;
         background-position: 0px;
 
         opacity: 0%;
@@ -89,9 +89,9 @@
 
     #main_CodeAwards {
         width: 450px;
-        margin-left: auto;
-        margin-right: auto;
-        position: relative;
+        top: calc((100vh - 260px)/2);
+        left: calc((100vw - 450px)/2);
+        position: fixed;
     }
 
     #logo_CodeAwards {
