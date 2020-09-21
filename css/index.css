@@ -17,10 +17,13 @@
         background-repeat: repeat-x;
         background-size: 100%;
         background-position: 0px;
+
+        opacity: 0%;
+        animation: anim_aparecer .5s linear 1 0.2s forwards;
     }
 
     header{
-        padding-top: 40px;
+        padding-top: 30px;
     }
 
     a {
@@ -40,6 +43,9 @@
         position: fixed;
         top: calc((100vh - 228px)/2);
         right: 68px;
+
+        opacity: 0%;
+        animation: anim_aparecer .5s linear 1 2.5s forwards;
     }
 
     li {
@@ -77,6 +83,8 @@
 
     #logo_espm {
         width: 100px;
+        opacity: 0%;
+        animation: anim_aparecer .5s linear 1 2.5s forwards;
     }
 
     #main_CodeAwards {
@@ -98,7 +106,7 @@
         margin-right: auto;
     }
 
-    #main_CodeAwards p{
+    #conceito{
         position: relative;
         width: 400px;
 
@@ -113,6 +121,128 @@
 
         margin-left: auto;
         margin-right: auto;
+        margin-top: 16px;
+    }
+
+    .triangulo{
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+    }
+
+    .rosa {
+        background-image: url(../images/Triangulo_rosa.png);
+    }
+
+    .rosa_out {
+        background-image: url(../images/Triangulo_rosa_out.png);
+    }
+
+    .azul {
+        background-image: url(../images/Triangulo_azul.png);
+    }
+
+    .azul_out {
+        background-image: url(../images/Triangulo_azul_out.png);
+    }
+
+    .T1 {
+        width: 40px;
+        height: 40px;
+        margin-left: -40px;
+        margin-top: -5px;
+        opacity: 0%;
+
+        animation: anim_rotacao 30s linear infinite, anim_aparecer .5s linear 1 1s forwards;
+    }
+
+    .T2 {
+        width: 40px;
+        height: 40px;
+        top: 50px;
+        right: 180px;
+        opacity: 0%;
+
+        animation: anim_rotacao 35s linear infinite reverse, anim_aparecer .5s linear 1 1.1s forwards;
+    }
+
+    .T3 {
+        width: 170px;
+        height: 170px;
+        top: calc(100vh - 250px);
+        right: 300px;
+        opacity: 0%;
+
+        animation: anim_rotacao 300s linear infinite reverse, anim_aparecer .5s linear 1 1.2s forwards;
+    }
+
+    .T4 {
+        width: 250px;
+        height: 250px;
+        top: calc(100vh - 350px);
+        left: -100px;
+        opacity: 0%;
+
+        animation: anim_rotacao 200s linear infinite, anim_aparecer .5s linear 1 1.3s forwards;
+    }
+
+    .T5 {
+        width: 80px;
+        height: 80px;
+        top: 100px;
+        left: 300px;
+        opacity: 0%;
+
+        animation: anim_rotacao 40s linear infinite reverse, anim_aparecer .5s linear 1 1.4s forwards;
+    }
+
+    .T6 {
+        width: 70px;
+        height: 70px;
+        top: 120px;
+        left: 280px;
+        opacity: 0%;
+
+        animation: anim_rotacao 80s linear infinite, anim_aparecer .5s linear 1 1.5s forwards;
+    }
+
+    .T7 {
+        width: 50px;
+        height: 50px;
+        top: calc(100vh - 100px);
+        right: 100px;
+        opacity: 0%;
+
+        animation: anim_rotacao 40s linear infinite reverse, anim_aparecer .5s linear 1 1.6s forwards;
+    }
+
+    .T8 {
+        width: 60px;
+        height: 60px;
+        top: calc(100vh - 130px);
+        right: 80px;
+        opacity: 0%;
+
+        animation: anim_rotacao 160s linear infinite, anim_aparecer .5s linear 1 1.7s forwards;
+    }
+
+    .T9 {
+        width: 30px;
+        height: 30px;
+        top: 50px;
+        right: 600px;
+        opacity: 0%;
+
+        animation: anim_rotacao 40s linear infinite, anim_aparecer .5s linear 1 1.8s forwards;
+    }
+
+    @keyframes anim_rotacao {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
     }
 
     #indicador_rolar{
@@ -120,8 +250,8 @@
         left: calc((100vw - 30px)/2);
         top: calc((100vh - 58px));
         width: 30px;
-        animation: anim_indicador .5s ease infinite;
-        animation-direction: alternate;
+        opacity: 0%;
+        animation: anim_indicador .5s ease infinite alternate, anim_aparecer .5s linear 1 2.5s forwards;
     }
 
     @keyframes anim_indicador {
@@ -131,7 +261,16 @@
         100% {
             top: calc((100vh - 80px));
         }
-      }
+    }
+
+    @keyframes anim_aparecer {
+        0% {
+            opacity: 0%;
+        }
+        100% {
+            opacity: 100%;
+        }
+    }
 
     #Challenge {
         height: 100vh;
