@@ -140,7 +140,91 @@
         </div>
     </div>
 
-    <div id="Votacao" class="page"></div>
+    <div id="Votacao" class="page">
+        <div class="container_mobile">
+            <span class="texto">
+                <span class="titulo premios">VOTE</span>
+            </span>
+            
+            <div class="texto">
+                Lorem ipsum dolor sit amet, conesctuor adisciping elit, ipsum dolor sit amet, conesctuor adisciping elit
+            </div>
+            
+            <div class="texto subtitulo">
+                <strong>Membro destaque (Ag + Digi)</strong>
+            </div>
+            
+            <div id="cont_membro_dest">
+                <div class="membro" onclick="votoMembro('Lucas Jandrey Leismann')">
+                    <div class="fundo">
+                        <div class="info">
+                            <div class="nome"><strong>Lucas</strong></div>
+                            <div class="sobrenome">Jandrey Leismann</div>
+                        </div>
+                        <div class="votar"></div>
+                    </div>
+                    <div class="foto lucas"></div>
+                </div>
+                
+            </div>
+            
+            <div class="texto subtitulo">
+                <strong>Diretor destaque</strong>
+            </div>
+            
+            <div id="cont_membro_dest">
+                <div class="membro" onclick="votoDiretor('Bernardo Rasador')">
+                    <div class="fundo">
+                        <div class="info">
+                            <div class="nome"><strong>Bernardo</strong></div>
+                            <div class="sobrenome">Rasador</div>
+                        </div>
+                        <div class="votar"></div>
+                    </div>
+                    <div class="foto bernardo"></div>
+                </div>
+            </div>
+            
+            <div id="cont_membro_dest">
+                <div class="membro" onclick="votoDiretor('Leonardo da Rocha')">
+                    <div class="fundo">
+                        <div class="info">
+                            <div class="nome"><strong>Leonardo</strong></div>
+                            <div class="sobrenome">da Rocha</div>
+                        </div>
+                        <div class="votar"></div>
+                    </div>
+                    <div class="foto leonardo"></div>
+                </div>
+            </div>
+            
+            <div id="cont_membro_dest">
+                <div class="membro" onclick="votoDiretor('Pedro Henrique Felini')">
+                    <div class="fundo">
+                        <div class="info">
+                            <div class="nome"><strong>Pedro</strong></div>
+                            <div class="sobrenome">Henrique Felini</div>
+                        </div>
+                        <div class="votar"></div>
+                    </div>
+                    <div class="foto pedro"></div>
+                </div>
+            </div>
+            
+            <div id="cont_membro_dest">
+                <div class="membro" onclick="votoDiretor('Roberta Alves de Almeida')">
+                    <div class="fundo">
+                        <div class="info">
+                            <div class="nome"><strong>Roberta</strong></div>
+                            <div class="sobrenome">Alves de Almeida</div>
+                        </div>
+                        <div class="votar"></div>
+                    </div>
+                    <div class="foto roberta"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <footer>
         Co.De Awards 2020 | Todos os direitos reservados
@@ -161,5 +245,15 @@
             $("#nav_lateral").removeClass("hidden");
             $("#nav_lateral").removeClass("draw_back");
         }
+    }
+</script>
+
+<script type="text/javascript">
+    function votoMembro(lNome){
+        alert('Confirmar voto de "Membro destaque" para "'+lNome+'"?');
+    }
+    
+    function votoDiretor(lNome){
+        alert('Confirmar voto de "Diretor(a) destaque" para "'+lNome+'"?');
     }
 </script>

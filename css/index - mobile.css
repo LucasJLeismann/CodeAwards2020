@@ -567,6 +567,104 @@ button {
     letter-spacing: 0.2em;
 }
 
+#Votacao {
+    margin-top: 140px;
+    height: auto;
+}
+
+#Votacao .texto {
+    font-size: 1.3em;
+}
+
+#Votacao .subtitulo {
+    text-align: left;
+    margin-top: 48px;
+    margin-bottom: 32px;
+}
+
+#cont_membro_dest {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.membro {
+    width: 100%;
+    height: auto;
+    margin-bottom: 42px;
+}
+
+.membro .fundo {
+    position: relative;
+    
+    background-color: #FFFFFF;
+    width: 90%;
+    height: 80px;
+    margin-left: auto;
+    border-radius: 10px;
+}
+
+.membro .foto {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    
+    background-color: #E71256;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px 10px 0px 10px;
+    
+    margin-top: -100px;
+}
+
+.membro .fundo .info {
+    position: relative;
+    
+    margin-left: 80px;
+    height: auto;
+    padding-top: 20px;
+    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.membro .fundo .votar {
+    width: 40px;
+    height: 40px;
+    
+    background-image: url(../images/like_off.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    position: absolute;
+    right: 24px;
+    top: 22px;
+}
+
+/* FOTOS MEMBROS */
+
+.foto.lucas{
+    background-image: url(../images/membro_lucas.png);
+}
+
+.foto.bernardo{
+    background-image: url(../images/membros/diretor/bernardo.jpg);
+}
+
+.foto.leonardo{
+    background-image: url(../images/membros/diretor/leonardo.jpg);
+}
+
+.foto.pedro{
+    background-image: url(../images/membros/diretor/pedro.jpg);
+}
+
+.foto.roberta{
+    background-image: url(../images/membros/diretor/roberta.jpg);
+}
+
+
 footer {
     height: 42px;
     width: 100vw;
