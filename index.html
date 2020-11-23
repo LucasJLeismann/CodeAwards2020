@@ -6,10 +6,11 @@
     <meta name="description" content="Aqui o algoritmo é a criatividade!">
     <title>Co.De Awards 2020</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
+    <main id="Inicio">
         <header>
             <figure>
                 <a href="https://www.espm.br/">
@@ -27,7 +28,8 @@
         <div class="triangulo azul T8"></div> 
         <div class="triangulo rosa T9"></div>
 
-        <nav>
+        <div id="nav_lateral">
+            <nav>
             <ul>
                 <li class="select">
                     <a href="#Inicio">Início</a>
@@ -37,16 +39,20 @@
                     <a href="#Challenge">Challenge</a>
                 </li>
                 <li>
-                    <a href="#Cronograma">Cronograma</a>
+                    <a href="#Premios">Premiações</a>
                 </li>
                 <li>
-                    <a href="#Inscricoes">Inscrições</a>
+                    <a href="#Participar">Participar</a>
+                </li>
+                <li>
+                    <a href="#Votacao">Votação</a>
                 </li>
             </ul>
         </nav>
+        </div>
 
         <div id="main_CodeAwards">
-            <div  id="logo_CodeAwards"></div>
+            <div id="logo_CodeAwards"></div>
 
             <div id="conceito">
                 Aqui o algoritmo é a criatividade!
@@ -58,15 +64,34 @@
             <img src="images/Scroll.png" alt="Rolar a página" id="indicador_rolar">
         </figure>
     </main>
+    
+    <div id="Challenge" class="page">
+        <div class="container">
+            <div class="texto">o <span class="titulo">CHALLENGE</span> do ano</div>
+        </div>
+    </div>
 
-    <div id="Challenge"></div>
+    <div id="Premios" class="page"></div>
 
-    <div id="Cronograma"></div>
+    <div id="Participar" class="page"></div>
 
-    <div id="Inscricoes"></div>
-
+    <div id="Votacao" class="page"></div>
+    
     <footer>
-
+        Co.De Awards 2020 | Todos os direitos reservados
     </footer>
 </body>
 </html>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script>
+    $(document).scroll(function(){
+        if ($(window).scrollTop() > 100) {
+            $("#nav_lateral").addClass("hidden");
+            $("#nav_lateral").addClass("draw_back");
+        } else {
+            $("#nav_lateral").removeClass("hidden");
+            $("#nav_lateral").removeClass("draw_back");
+        }
+    });
+</script>

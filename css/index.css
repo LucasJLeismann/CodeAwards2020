@@ -2,7 +2,7 @@
 
     html {
         scroll-behavior: smooth;
-        overflow: hidden;
+        overflow-x: hidden;
     }
 
     body {
@@ -35,14 +35,38 @@
         color: white;
     }
 
+    #nav_lateral {
+        height: 100vh;
+        width: 400px;
+        position: fixed;
+        right: 8px;
+        top: 0px;
+        
+        transition: ease 0.4s;
+    }
+    
+    .draw_back {
+        background: rgb(9,9,9);
+        background: linear-gradient(270deg, rgba(9,9,9,1) 0%, rgba(9,9,9,0) 100%);
+    }
+    
+    #nav_lateral.hidden{
+        right: -400px;
+        opacity: 0;
+    }
+    
     nav {
+        height: auto;
+        width: 200px;
         color: white;
         font-family: 'Montserrat', sans-serif;
         font-weight: 500;
         font-size: 20px;
-        position: fixed;
-        top: calc((100vh - 228px)/2);
-        right: 68px;
+        
+        position: relative;
+        top: calc((100vh - 280px)/2);
+        left: 160px;
+        
 
         opacity: 0%;
         animation: anim_aparecer .5s linear 1 2.5s forwards;
@@ -70,6 +94,7 @@
 
     #nav_select {
         position: relative;
+        z-index: -1;
 
         border-style: solid;
         border-color: tomato;
@@ -79,6 +104,12 @@
         height: 37px;
         top: -27px;
         left: -4px;
+    }
+    
+    nav::before {
+        height: 100vh;
+        width: 100px;
+        background-color: aqua;
     }
 
     #logo_espm {
@@ -104,6 +135,22 @@
         background-position: center;
         margin-left: auto;
         margin-right: auto;
+        animation: anim_TumTum 0.9s ease-out infinite 2.7s forwards;
+    }
+    
+    @keyframes anim_TumTum {
+        0%{
+            transform: scale(1) rotate(0deg);
+        }
+        25%{
+            transform: scale(1.02) rotate(1deg);
+        }
+        50%{
+            transform: scale(1) rotate(0deg);
+        }
+        75%{
+            transform: scale(1.02) rotate(-1deg);
+        }
     }
 
     #conceito{
@@ -272,27 +319,58 @@
         }
     }
 
-    #Challenge {
+    .page {
         height: 100vh;
         background-image: url(../images/bg_homepage2.png);
         background-repeat: repeat-x;
         background-size: 100%;
         background-position: 0px;
     }
-
-    #Cronograma {
-        height: 100vh;
-        background-image: url(../images/bg_homepage2.png);
-        background-repeat: repeat-x;
-        background-size: 100%;
-        background-position: 0px;
+    
+    .container {
+        width: 1000px;
+        height: 90%;
+        
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
     }
-
-    #Inscricoes {
-        height: 100vh;
-        background-image: url(../images/bg_homepage2.png);
-        background-repeat: repeat-x;
-        background-size: 100%;
-        background-position: 0px;
+    
+    .texto {
+        text-align: center;
+        color: #FFFFFF;
+        
+        font-family: "Montserrat";
+        font-size: 3em;
+        font-weight: 300;
+        margin-top: 10%;
+    }
+    
+    span.titulo{
+        font-size: 1.8em;
+        font-weight: 700;
+        
+        color: transparent;
+        
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #66C9D0;
+        
+        letter-spacing: 0.1em;
+    }
+    
+    footer {
+        height: 42px;
+        width: 100vw;
+        
+        background-color: #3C3C3C;
+        color: #FFFFFF;
+        
+        display: flex;
+        align-items: center;
+        
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+        padding-left: 24px;
     }
 }

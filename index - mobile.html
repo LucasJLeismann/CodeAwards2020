@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aqui o algoritmo é a criatividade!">
+    <title>Co.De Awards 2020</title>
+    <link rel="stylesheet" href="css/index%20-%20mobile.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main id="Inicio">
+        <header>
+            <div id="logo_espm"></div>
+        </header>
+
+        <div class="triangulo azul T2"></div>   
+        <div class="triangulo rosa_out T3"></div>  
+        <div class="triangulo azul_out T4"></div>  
+        <div class="triangulo azul_out T5"></div>  
+        <div class="triangulo rosa T6"></div>  
+        <div class="triangulo rosa T7"></div> 
+        <div class="triangulo azul T8"></div> 
+        <div class="triangulo rosa T9"></div>
+
+        <div id="nav_lateral">
+            <nav>
+            <ul>
+                <li class="select">
+                    <a href="#Inicio">Início</a>
+                    <div id="nav_select"></div>
+                </li>
+                <li>
+                    <a href="#Challenge">Challenge</a>
+                </li>
+                <li>
+                    <a href="#Premios">Premiações</a>
+                </li>
+                <li>
+                    <a href="#Participar">Participar</a>
+                </li>
+                <li>
+                    <a href="#Votacao">Votação</a>
+                </li>
+            </ul>
+        </nav>
+        </div>
+
+        <div id="main_CodeAwards">
+            <div id="logo_CodeAwards"></div>
+
+            <div id="conceito">
+                Aqui o algoritmo<div id="break_line"></div> é a criatividade!
+                <div class="triangulo rosa T1"></div>   
+            </div>
+        </div>
+
+        <figure>
+            <img src="images/Scroll.png" alt="Rolar a página" id="indicador_rolar">
+        </figure>
+    </main>
+    
+    <div id="Challenge" class="page">
+        <div class="container_desktop">
+            <div class="texto">o <span class="titulo">CHALLENGE</span> do ano</div>
+        </div>
+        
+        <div class="container_mobile">
+            <div class="texto">o <br><span class="titulo">CHA<br><span class="txt_spacing">LLE</span><br>NGE</span><br> do ano</div>
+        </div>
+        
+         <div class="container_apresentacao">
+             <div class="image"></div>
+             <div class="texto t3">
+                 O ano de 2020 foi uma batalha diária para cada um de nós - <strong>e para os coders, isso não foi diferente!</strong>
+                 <br><br>
+                 No decorrer dos últimos semestres, projetos INCRÍVEIS foram desenvolvidos por esta equipe que se provou completamente <strong>A B S U R D A.</strong>
+                 <br><br>
+                 Nada mais justo do que prestigiá-los e conceder a eles o devido reconhecimento pela garra e motivação, que não se deixaram abalar mesmo durante o distanciamento social.
+                 <br><br>
+                 Este momento é de vocês! <strong>Aproveitem, divirtam-se e vibrem conosco!</strong>
+             </div>
+        </div>
+        
+        
+    </div>
+
+    <div id="Premios" class="page">
+        <div class="container_mobile">
+            <span class="texto">
+                <span class="titulo premios">PRÊMIOS</span>
+            </span>
+            
+            <div id="carrossel_premios_min">
+                <div class="quad_premio selected"></div>
+                <div class="quad_premio"></div>
+                <div class="quad_premio"></div>
+            </div>
+            
+            <div id="carrossel_premios">
+                <div class="quad_premio membro_dest"></div>
+                <div class="quad_premio proj_dest"></div>
+                <div class="quad_premio diretor_dest"></div>
+            </div>
+            
+            <div class="texto">
+                Lorem ipsum dolor sit amet, conesctuor adisciping elit, ipsum dolor sit amet, conesctuor adisciping elit
+            </div>
+        </div>
+    </div>
+
+    <div id="Participar" class="page">
+        <div class="container_mobile">
+            <span class="texto">
+                <span class="titulo premios">PARTICIPE</span>
+            </span>
+            
+            <div class="texto">
+                Lorem ipsum dolor sit amet, conesctuor adisciping elit, ipsum dolor sit amet, conesctuor adisciping elit
+            </div>
+            
+            <form id="form_participar">
+                <div class="div_campo">
+                    <div class="titulo_campo">
+                        Seu TikTok dançando
+                    </div>
+                    <input type="url" placeholder="https://www.tiktok.com/..." />
+                </div>
+            
+                <div class="div_campo">
+                    <div class="titulo_campo">
+                        POV: Você ganhou o Co.De Awards
+                    </div>
+                    <input type="url" placeholder="https://www.tiktok.com/..."/>
+                </div>
+                
+                <button>TUDO PRONTO!</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="Votacao" class="page"></div>
+    
+    <footer>
+        Co.De Awards 2020 | Todos os direitos reservados
+    </footer>
+</body>
+</html>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script>
+    $(document).scroll(VerificarMenuLateral);
+    $(document).resize(VerificarMenuLateral);
+    
+    function VerificarMenuLateral(){
+        if ($(window).scrollTop() > 100) {
+            $("#nav_lateral").addClass("hidden");
+            $("#nav_lateral").addClass("draw_back");
+        } else {
+            $("#nav_lateral").removeClass("hidden");
+            $("#nav_lateral").removeClass("draw_back");
+        }
+    }
+</script>
